@@ -85,7 +85,14 @@ One possible source of data is running a patched osmo-tetra on your own network 
 Use the version from here:
 https://github.com/sq5bpf/osmo-tetra-sq5bpf-2
 
+Running on a recorded bitstream:
+
 ./tetra-rx -r -s tetra_bits.bin > tetra_rx_stdout 2> tetra_rx_stderr
+
+Running on a live receiver:
+
+./receiver1udp 1 > tetra_rx_stdout 2> tetra_rx_stderr
+
 
 Search tetra_rx_stdout for the string "key recovery candidate" and the same Addr field, same cckid, and only one entry per burst.
 
